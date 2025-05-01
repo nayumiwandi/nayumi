@@ -18,12 +18,12 @@ const APP_DOMAIN = `${serviceName}.${rootDomain}`;
 const PORTS = [443, 80];
 const PROTOCOLS = [reverse("najort"), reverse("sselv"), reverse("ss")];
 const KV_PROXY_URL = "https://raw.githubusercontent.com/FoolVPN-ID/Nautica/refs/heads/main/kvProxyList.json";
-const PROXY_BANK_URL = "https://raw.githubusercontent.com/FoolVPN-ID/Nautica/refs/heads/main/proxyList.txt";
+const PROXY_BANK_URL = "https://raw.githubusercontent.com/Mayumiwandi/Emilia/refs/heads/main/Data/alive.txt";
 const DNS_SERVER_ADDRESS = "8.8.8.8";
 const DNS_SERVER_PORT = 53;
 const PROXY_HEALTH_CHECK_API = "https://id1.foolvpn.me/api/v1/check";
 const CONVERTER_URL = "https://api.foolvpn.me/convert";
-const DONATE_LINK = "https://trakteer.id/dickymuliafiqri/tip";
+const DONATE_LINK = "https://trakteer.id/mayumiwandi/tip";
 const BAD_WORDS_LIST =
   "https://gist.githubusercontent.com/adierebel/a69396d79b787b84d89b45002cb37cd6/raw/6df5f8728b18699496ad588b3953931078ab9cf1/kata-kasar.txt";
 const PROXY_PER_PAGE = 24;
@@ -853,38 +853,6 @@ function parseNajortHeader(buffer) {
   };
 }
 
-// function parseSsemvHeader(buffer) {
-//   const date = new Date(new Date().toLocaleString("en", { timeZone: "Asia/Jakarta" }));
-//   console.log(`Date: ${date}`);
-//   console.log(`First 16 bytes: ${arrayBufferToHex(buffer.slice(0, 17))}`);
-//   console.log(`Remaining bytes: ${arrayBufferToHex(buffer.slice(17))}`);
-
-//   // ===== KEY GENERATION =====
-//   const userId = "3b670322-6ac1-41ec-9ff3-714245d41bf7";
-//   const uuidConst = "c48619fe-8f02-49e0-b9e9-edf763e17e21";
-
-//   // Step 1: Generate AES key
-//   const key = createHash("md5")
-//     .update(userId + uuidConst)
-//     .digest();
-//   console.log(`KEY: ${key}`);
-
-//   // Step 2: Generate Timestamp (current Unix time)
-//   const timestamp = Math.floor(date.getTime() / 1000); // current timestamp in seconds
-
-//   // Step 3: Generate IV from Timestamp
-//   const x = Buffer.alloc(8);
-//   x.writeBigUInt64BE(BigInt(timestamp)); // 8-byte timestamp (Big Endian)
-//   const iv_source = Buffer.concat([x, x, x, x]);
-//   const iv = createHash("md5").update(iv_source).digest();
-//   console.log(`IV: ${iv}`);
-
-//   // Step 4: Decrypt using AES-128-CFB
-//   const decipher = createDecipheriv("aes-128-cfb", key, iv);
-//   const decrypted = Buffer.concat([decipher.update(buffer.slice(17)), decipher.final()]);
-
-//   console.log(`Decrypted Header: ${decrypted.toString("hex")}`);
-// }
 
 async function remoteSocketToWS(remoteSocket, webSocket, responseHeader, retry, log) {
   let header = responseHeader;
@@ -1080,14 +1048,16 @@ let baseHTML = `
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Proxy List</title>
+    <link rel="icon" type="image/x-icon"
+        href="https://github.com/user-attachments/assets/b5feabb7-3f20-4028-9436-e3f3307dd2ae">
+    <title>Yumi - Proxy</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
       /* For Webkit-based browsers (Chrome, Safari and Opera) */
       .scrollbar-hide::-webkit-scrollbar {
           display: none;
       }
-
+sub
       /* For IE, Edge and Firefox */
       .scrollbar-hide {
           -ms-overflow-style: none;  /* IE and Edge */
