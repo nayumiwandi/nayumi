@@ -5,10 +5,10 @@ import { connect } from "cloudflare:sockets";
 // Variables
 const rootDomain = "kopimuriavpn.workers.dev"; // Ganti dengan domain utama kalian
 const serviceName = "kopi"; // Ganti dengan nama workers kalian
-const apiKey = ""; // Ganti dengan Global API key kalian (https://dash.cloudflare.com/profile/api-tokens)
-const apiEmail = ""; // Ganti dengan email yang kalian gunakan
-const accountID = ""; // Ganti dengan Account ID kalian (https://dash.cloudflare.com -> Klik domain yang kalian gunakan)
-const zoneID = ""; // Ganti dengan Zone ID kalian (https://dash.cloudflare.com -> Klik domain yang kalian gunakan)
+const apiKey = "fe1a20bd9fbd7595db14d90138c50c8e62bdd"; // Ganti dengan Global API key kalian (https://dash.cloudflare.com/profile/api-tokens)
+const apiEmail = "madjidhariadi5@gmail.com"; // Ganti dengan email yang kalian gunakan
+const accountID = "2e02ea9d3e939545bc8179c671699cae"; // Ganti dengan Account ID kalian (https://dash.cloudflare.com -> Klik domain yang kalian gunakan)
+const zoneID = "2e02ea9d3e939545bc8179c671699cae"; // Ganti dengan Zone ID kalian (https://dash.cloudflare.com -> Klik domain yang kalian gunakan)
 let isApiReady = false;
 let proxyIP = "";
 let cachedProxyList = [];
@@ -19,7 +19,7 @@ const PORTS = [443, 80];
 const PROTOCOLS = [reverse("najort"), reverse("sselv"), reverse("ss")];
 const KV_PROXY_URL = "https://raw.githubusercontent.com/FoolVPN-ID/Nautica/refs/heads/main/kvProxyList.json";
 const PROXY_BANK_URL = "https://raw.githubusercontent.com/Mayumiwandi/Emilia/refs/heads/main/Data/alive.txt";
-const DNS_SERVER_ADDRESS = "8.8.8.8";
+const DNS_SERVER_ADDRESS = "1.1.1.1";
 const DNS_SERVER_PORT = 53;
 const PROXY_HEALTH_CHECK_API = "https://id1.foolvpn.me/api/v1/check";
 const CONVERTER_URL = "https://api.foolvpn.me/convert";
